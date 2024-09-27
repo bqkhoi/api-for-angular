@@ -1,14 +1,12 @@
-version: '3.7'
-
 services:
   db:
     image: mysql
     environment:
       MYSQL_ROOT_PASSWORD: '123456'
     ports:
-      - "5000:3306"
+      - "6000:3306"
     expose:
-      - "5000"
+      - "6000"
   adminer:
     image: adminer
     restart: always

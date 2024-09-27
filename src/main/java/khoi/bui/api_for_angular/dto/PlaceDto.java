@@ -6,6 +6,15 @@ public class PlaceDto {
     private ImageDto image;
     private double lat;
     private double lon;
+    private boolean isUserPlace;
+
+    public boolean isUserPlace() {
+        return isUserPlace;
+    }
+
+    public void setUserPlace(boolean userPlace) {
+        isUserPlace = userPlace;
+    }
 
     public String getId() {
         return id;

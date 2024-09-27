@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import org.antlr.v4.runtime.misc.NotNull;
+import org.springframework.beans.factory.annotation.Value;
 
 @Entity
 public class Place {
@@ -15,6 +17,15 @@ public class Place {
     private Image image;
     private double lat;
     private double lon;
+    private boolean isUserPlace=false;
+
+    public boolean isUserPlace() {
+        return isUserPlace;
+    }
+
+    public void setUserPlace(boolean userPlace) {
+        isUserPlace = userPlace;
+    }
 
     public Place(String id, String title, Image image, double lat, double lon) {
         this.id = id;
